@@ -3,14 +3,21 @@ require 'guided_interactor/context'
 require 'guided_interactor/error'
 require 'guided_interactor/hooks'
 require 'guided_interactor/organizer'
+require 'guided_interactor/delegator'
 
 # Usage
 #
 #   class MyInteractor
 #     include GuidedInteractor
 #
+#     expects :foo
+#     expects! :bar, :baz
+#     provides :waldo
+#
 #     def call
-#       puts context.foo
+#       context.waldo = 'waldo'
+#       puts foo
+#       puts waldo
 #     end
 #   end
 module GuidedInteractor
@@ -19,6 +26,7 @@ module GuidedInteractor
     base.class_eval do
       extend ClassMethods
       include Hooks
+      include Delegator
 
       attr_reader :context
     end
