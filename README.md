@@ -53,14 +53,14 @@ class Foo
   provides :message
 
   def call
-    context.message = "#{greeting} #{name.capitalize}!"
+    context.message = "#{greeting} #{first_name.capitalize} #{last_name.capitalize}!"
     puts message
   end
 end
 
-Foo.call(greeting: "Hello", name: "Waldo")
-Hello Waldo!
-=> #<GuidedInteractor::Context greeting="Hello", name="Waldo", message="Hello Waldo!">
+Foo.call(greeting: "Hello", first_name: "Waldo", last_name: "smith")
+Hello Waldo Smith!
+=> #<GuidedInteractor::Context greeting="Hello", first_name="Waldo", last_name="smith", message="Hello Waldo Smith!">
 
 result = Foo.call(greeting: "Hi")
 => #<GuidedInteractor::Context greeting="Hi">
