@@ -34,6 +34,10 @@ class MyInteractor
   expects :foo
   expects! :bar
   provides :waldo
+  
+  def call
+    # do smth
+  end
 
 end
 ```
