@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    guided_interactor (1.0.1)
+    guided_interactor (1.0.2)
 
 GEM
   remote: https://rubygems.org/
