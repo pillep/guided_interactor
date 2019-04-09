@@ -426,6 +426,8 @@ Style/StringLiterals:
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#consistent-string-literals'
   EnforcedStyle: single_quotes
   Enabled: true
+  Exclude:
+    - guided_interactor.gemspec
 
 Style/TrailingCommaInArguments:
   Description: 'Checks for trailing comma in argument lists.'
